@@ -2,7 +2,7 @@
 
 [![GitHub Pages](https://img.shields.io/badge/GitHub-Pages-blue)](https://blinklay.github.io/quiz-react/)
 
-![Quiz Screenshot](./public/quizpic.png)
+![Quiz Screenshot](./public/quizpic.jpg)
 
 ## Описание
 
@@ -20,7 +20,7 @@
 
 Для ознакомления с внешним видом приложения, вы можете посмотреть скриншот:
 
-![Quiz Screenshot](./public/quizpic.png)
+![Quiz Screenshot](./public/quizpic.jpg)
 
 ## Установка и запуск
 
