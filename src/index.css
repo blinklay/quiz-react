@@ -23,4 +23,13 @@ body {
   background-color: var(--color-background);
   color: var(--color-accent);
   line-height: 1.2;
+  font-weight: 400;
+  height: 100vh;
+}
+
+.App {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
