@@ -198,7 +198,8 @@ const questions = [
 function getRandomQuestion(questions) {
   const arr = [];
   for (let i = 0; i < 5; i++) {
-    arr.push(questions[Math.floor(Math.random() * (questions.length - 1))]);
+    const randomId = Math.floor(Math.random() * (questions.length - 1));
+    arr.push(questions[randomId]);
   }
   let count = 1;
   return arr.map((item) => {
@@ -221,7 +222,6 @@ function App() {
     if (isCurrent) setCountSuccess((prev) => prev + 1);
     if (currentQuestion >= currentQuestions.length) {
       setIsEnd(true);
-      return;
     }
     setCurrentQuestion((prev) => prev + 1);
   };

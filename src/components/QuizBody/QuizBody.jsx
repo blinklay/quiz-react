@@ -32,6 +32,13 @@ export default function QuizBody({
           ))}
         </div>
       )}
+      <div className={styles["quiz-trackline"]}>
+        <div
+          style={{
+            width: ((currentQuestion - 1) / questions.length) * 100 + "%",
+          }}
+        ></div>
+      </div>
     </div>
   );
 }
