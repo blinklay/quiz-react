@@ -48,3 +48,8 @@
   position: absolute;
   background-color: var(--color-accent);
 }
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}

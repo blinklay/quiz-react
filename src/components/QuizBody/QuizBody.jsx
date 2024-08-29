@@ -1,15 +1,37 @@
 import Question from "../Question/Question";
 import styles from "./QuizBody.module.css";
-export default function QuizBody() {
+import picture from "../../assets/brain.png";
+export default function QuizBody({
+  questions,
+  currentQuestion,
+  getAnswer,
+  isEnd,
+  countSuccess,
+  resetGame,
+}) {
   return (
     <div className={styles["quiz-body"]}>
       <h1 className={styles["quiz-header"]}>Quiz</h1>
-
-      <div className={styles["quiz-questions"]}>
-        <Question />
-        <Question />
-        <Question />
-      </div>
+      {isEnd ? (
+        <div className={styles["quiz-end"]}>
+          <img src={picture} alt="brain picture " />
+          <p>Это конец квиза! Правильных ответов: {countSuccess}</p>
+          <button onClick={resetGame} className={styles["quiz-reset"]}>
+            Заново
+          </button>
+        </div>
+      ) : (
+        <div className={styles["quiz-questions"]}>
+          {questions.map((question) => (
+            <Question
+              getAnswer={getAnswer}
+              currentQuestion={currentQuestion}
+              key={question.id}
+              {...question}
+            />
+          ))}
+        </div>
+      )}
     </div>
   );
 }
